@@ -26,9 +26,7 @@ export {
   fetchPhotoTags
 } from "./photos"
 
-export {
-  fetchPlaceByID
-} from "./places"
+export { fetchPlaceByID } from "./places"
 
 export {
   fetchUserAlbums,

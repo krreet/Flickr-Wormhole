@@ -7,6 +7,7 @@ export const schema = new GqlSchema({
     fields: () =>
       Object.assign(
         {},
+        // eslint-disable-next-line compat/compat
         ...Object.values(Types)
           .filter(type => !!type.Queries)
           .map(type => type.Queries)

@@ -21,6 +21,7 @@ export class Flickr {
 
   fetchResource(method: string = ``, args = {}, options = {}, requiresAuth: boolean = false): Promise<any> {
     try {
+    //console.log("method" , method)
       invariant(isString(method), missingArgument({ method }))
       const required =
         Object.entries(args)
@@ -47,6 +48,7 @@ export class Flickr {
     }
   }
 
+  // eslint-disable-next-line compat/compat
   fetch = (urls: Array<string>): Promise<any> => Promise.all(
     urls.map(
       url => fetch(`${this.endpoint}?method=${url}&api_key=${this.apiKey}&format=json&nojsoncallback=1`)

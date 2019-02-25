@@ -40,15 +40,15 @@ export class ApolloError extends ExtendableError {
 
     this.name = name
     this.message = m
-    this.time_thrown = !!timeThrown || timeThrown
+    this.timeThrown = !!timeThrown || timeThrown
     this.data = Object.assign({}, data, (!!data || {}))
     this.showLocations = !!opts.showLocations
   }
 
   serialize() {
-    const { name, message, time_thrown, data, showLocations, path, locations } = this
+    const { name, message, timeThrown, data, showLocations, path, locations } = this
 
-    let error = { message, name, time_thrown, data }
+    let error = { message, name, timeThrown, data }
 
     if (showLocations) {
       error.locations = locations
