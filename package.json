@@ -13,7 +13,7 @@
     "precommit": "lint-staged",
     "start": "npm run start:dev",
     "start:local": "cross-env LOCAL=True nodemon --watch src src/server.js --exec babel-node --color",
-    "start:dev": "cross-env LOCAL=False NODE_ENV=development./bin/serverless offline start --dontPrintOutput",
+    "start:dev": "cross-env LOCAL=False NODE_ENV=development ./bin/serverless offline start --dontPrintOutput",
     "start:prod": "cross-env LOCAL=False NODE_ENV=production serverless --stage=production offline start --dontPrintOutput",
     "deploy": "npm run deploy:dev",
     "deploy:dev": "cross-env NODE_ENV=development serverless --stage=dev deploy",
