@@ -14,7 +14,7 @@ plugins:
 
 custom:
   serverless-offline:
-    port: 1337
+    port: 8080
   webpackIncludeModules: true
 
 functions:
