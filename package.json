@@ -12,8 +12,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "start": "npm run start:dev",
-    "start:dev": "cross-env LOCAL=True nodemon --watch src src/server.js --exec babel-node --color",
-    "start:local": "cross-env LOCAL=False NODE_ENV=development serverless offline start --dontPrintOutput",
+    "start:local": "cross-env LOCAL=True nodemon --watch src src/server.js --exec babel-node --color",
+    "start:dev": "cross-env LOCAL=False NODE_ENV=development. /bin/serverless offline start --dontPrintOutput",
     "start:prod": "cross-env LOCAL=False NODE_ENV=production serverless --stage=production offline start --dontPrintOutput",
     "deploy": "npm run deploy:dev",
     "deploy:dev": "cross-env NODE_ENV=development serverless --stage=dev deploy",
@@ -52,7 +52,8 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "snyk": "^1.42.6",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "serverless": "^1.38.0"
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.1",
