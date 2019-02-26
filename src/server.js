@@ -7,7 +7,7 @@ import playground from "./playground" // GraphQL Playground Route
 import api from "./api" // GraphQL API Endpoint
 
 const server = new hapi.Server({
-  host: `localhost`,
+  host: `0.0.0.0`,
   port: PORT,
   routes: { cors: true }
 })
